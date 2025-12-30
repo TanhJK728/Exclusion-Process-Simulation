@@ -100,3 +100,29 @@ Shows the average occupancy ($0.0$ to $1.0$) at each lattice site over the simul
     ```bash
     python main.py
     ```
+
+
+
+
+## Visualization Guide
+
+This project generates two primary visualizations to help you analyze the system's behavior. Here is how to interpret them.
+
+### 1. Space-Time Evolution Diagram
+This heatmap visualizes the history of the entire lattice.
+* **X-Axis:** Lattice sites (spatial position $0$ to $L$).
+* **Y-Axis:** Time (simulation steps, increasing downward).
+* **Pixels:** Black indicates a **Particle**; White indicates an **Empty Site**.
+
+| Pattern | Interpretation |
+| :--- | :--- |
+| **"Static" / Noise** | **Equilibrium Diffusion (SEP).** Particles jitter randomly left and right. No net transport is occurring. |
+| **Diagonal Stripes** | **Ballistic Transport (TASEP/ASEP).** Particles are flowing in a specific direction (usually right). The slope of the line indicates the velocity. |
+| **Thick Dark Bands** | **Traffic Jams.** These are clusters of particles blocking each other due to the Exclusion Principle. Notice how these "jams" often move backward (upstream) relative to the particle flow. |
+
+### 2. Average Density Profile
+This line plot shows the time-averaged occupancy of each site (0.0 to 1.0).
+
+* **Flat Line ($\approx 0.5$):** Indicates the system has reached a **Steady State**. The noise/roughness is due to finite simulation time (stochastic fluctuations).
+* **Sloped Line:** (Only in Open Boundary systems) Would indicate a density gradient, where particles pile up at one end.
+* **Persistent Waves:** In periodic systems, this often indicates "Kinematic Waves" or moving clusters that haven't yet dispersed.
