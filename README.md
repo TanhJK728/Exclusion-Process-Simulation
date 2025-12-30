@@ -55,9 +55,7 @@ $$\Delta t = \frac{-\ln(\text{random}(0,1))}{R_{total}}$$
 ### 4. Select Event
 An event is chosen using a weighted probability:
 
-$$
-P(\text{event}_i) = \frac{r_i}{R_{total}}
-$$
+$$P(\text{event}_i) = \frac{r_i}{R_{total}}$$
 
 *Events with higher rates are more likely to occur.*
 
@@ -69,7 +67,7 @@ The simulation uses **Periodic Boundary Conditions**.
 
 ---
 
-## Visual Interpretation
+## Visualizations Produced
 
 ### 1. Space-Time Diagram (`plot_spacetime`)
 * **X-axis:** Lattice position ($0$ to $L$).
@@ -108,7 +106,7 @@ Shows the average occupancy ($0.0$ to $1.0$) at each lattice site over the simul
 
 
 
-## Visualization Guide
+## Understanding the Visualization
 
 This project generates two primary visualizations to help you analyze the system's behavior. Here is how to interpret them.
 
@@ -120,7 +118,7 @@ This heatmap visualizes the history of the entire lattice.
 
 | Pattern | Interpretation |
 | :--- | :--- |
-| **"Static" / Noise** | **Equilibrium Diffusion (SEP).** Particles jitter randomly left and right. No net transport is occurring. |
+| **"Static"/Noise** | **Equilibrium Diffusion (SEP).** Particles jitter randomly left and right. No net transport is occurring. |
 | **Diagonal Stripes** | **Ballistic Transport (TASEP/ASEP).** Particles are flowing in a specific direction (usually right). The slope of the line indicates the velocity. |
 | **Thick Dark Bands** | **Traffic Jams.** These are clusters of particles blocking each other due to the Exclusion Principle. Notice how these "jams" often move backward (upstream) relative to the particle flow. |
 
