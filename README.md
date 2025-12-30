@@ -108,7 +108,7 @@ Shows the average occupancy ($0.0$ to $1.0$) at each lattice site over the simul
 
 ## Understanding the Visualization
 
-This project generates two primary visualizations to help you analyze the system's behavior. Here is how to interpret them.
+This project generates two primary visualizations to help you analyze the system's behavior:
 
 ### 1. Space-Time Evolution Diagram
 This heatmap visualizes the history of the entire lattice.
