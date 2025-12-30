@@ -54,7 +54,9 @@ $$\Delta t = \frac{-\ln(\text{random}(0,1))}{R_{total}}$$
 
 ### 4. Select Event
 An event is chosen using a weighted probability:
-$$P(\text{event}_i) = \frac{r_i}{R_{total}}$$
+$$
+P(\text{event}_i) = \frac{r_i}{R_{total}}
+$$
 *Events with higher rates are more likely to occur.*
 
 ### 5. Boundary Conditions
