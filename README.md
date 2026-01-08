@@ -32,6 +32,7 @@ This repository implements three variations of the model:
 * `model.py`: Contains the `ExclusionProcess` class. It manages the lattice state, enforces boundary conditions, and executes the Gillespie algorithm logic.
 * `main.py`: The entry point. Configures the simulation parameters (Lattice size `L`, Particle count `N`, Rates `p/q`), runs the model, and triggers visualization.
 * `visualizer.py`: Helper functions using `matplotlib` to generate Space-Time diagrams and Density Profiles.
+* `visualizer_dynamic.py`: Handles the generation of GIF animations for simulation playback.
 
 ---
 
@@ -75,6 +76,9 @@ The simulation uses **Periodic Boundary Conditions**.
 * **Black dots:** Particles.
 * **White space:** Empty sites.
 
+**Example (TASEP Mode):**
+![TASEP Space-Time Diagram](TASEP Evolution.png)
+
 **What to look for:**
 * **TASEP:** Diagonal streaks indicating flow. High density leads to "traffic jams" (clusters moving slowly).
 * **SEP:** No clear direction; a noisy, diffusive pattern.
@@ -82,6 +86,16 @@ The simulation uses **Periodic Boundary Conditions**.
 
 ### 2. Density Profile (`plot_density_profile`)
 Shows the average occupancy ($0.0$ to $1.0$) at each lattice site over the simulation history. For periodic boundaries and homogeneous initial conditions, this should generally be flat at $\rho = N/L$. Deviations may indicate finite-size effects or non-steady-state behavior.
+
+**Example (TASEP Mode):**
+![TASEP Density Profile](TASEP Density.png)
+
+### 3. Dynamic Animation (`save_animation`)
+Generates a GIF to visualize the micro-state evolution of the lattice. This is particularly useful for observing "jamming" and hole transport in real-time.
+
+**Example (TASEP Mode):**
+![TASEP Animation](TASEP_evolution.gif)
+*(Note: Run the simulation to generate this GIF locally)*
 
 ---
 
@@ -103,12 +117,11 @@ Shows the average occupancy ($0.0$ to $1.0$) at each lattice site over the simul
     python main.py
     ```
 
-
-
+---
 
 ## Understanding the Visualization
 
-This project generates two primary visualizations to help you analyze the system's behavior:
+This project generates visual outputs to help you analyze the system's behavior:
 
 ### 1. Space-Time Evolution Diagram
 This heatmap visualizes the history of the entire lattice.
