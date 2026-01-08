@@ -77,7 +77,7 @@ The simulation uses **Periodic Boundary Conditions**.
 * **White space:** Empty sites.
 
 **Example (TASEP Mode):**
-![TASEP Space-Time Diagram](TASEP Evolution.png)
+![TASEP Space-Time Diagram](TASEP_Evolution.png)
 
 **What to look for:**
 * **TASEP:** Diagonal streaks indicating flow. High density leads to "traffic jams" (clusters moving slowly).
@@ -88,7 +88,7 @@ The simulation uses **Periodic Boundary Conditions**.
 Shows the average occupancy ($0.0$ to $1.0$) at each lattice site over the simulation history. For periodic boundaries and homogeneous initial conditions, this should generally be flat at $\rho = N/L$. Deviations may indicate finite-size effects or non-steady-state behavior.
 
 **Example (TASEP Mode):**
-![TASEP Density Profile](TASEP Density.png)
+![TASEP Density Profile](TASEP_Density.png)
 
 ### 3. Dynamic Animation (`save_animation`)
 Generates a GIF to visualize the micro-state evolution of the lattice. This is particularly useful for observing "jamming" and hole transport in real-time.
